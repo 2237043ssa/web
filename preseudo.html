@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><06-07></title>
+    <style>
+      /* 가상 클래스 */
+      a:link {
+        color: red;
+        text-decoration: underline;
+      }
+      a:visited {
+        color: red;
+      }
+      a:hover {
+        text-decoration: overline;
+      }
+      a:active {
+        background: yellow;
+      }
+
+      div.d1:hover {
+        border: 1px dashed red;
+        width: 400px;
+        padding: 5px;
+        background: lavender;
+      }
+
+      /* 가상 클래스 */
+
+      div.d2:hover {
+        border: 1px dashed green;
+        width: 400px;
+        padding: 5px;
+        color: yellow;
+        opacity: 0.5;
+        box-shadow: 10px 5px 10px black;
+      }
+
+      div.d2:hover {
+        background: green;
+        width: 400px;
+        height: 100px;
+        background: skyblue;
+        position: relative;
+        animation-name: mymove;
+        animation-duration: 5s;
+      }
+      @keyframes blink-effect {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .blink {
+        animation: blink-effect 1s step-end infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Pseudo Class</h2>
+    <p>
+      <a href="http://www.w3.org" target="_blank">
+        w3c 방문 : 마우스 이벤트에 따른 링크의 변화를 잘 보세요.</a
+      >
+    </p>
+    <div class="d1">
+      <h3>가상 클래스 1 영역</h3>
+      마우스 위치에 따른 박스의 스타일 변화를 보세요.
+    </div>
+
+    <div class="d2">
+      <h3 class="blink">가상 클래스 2 영역</h3>
+      마우스 위치에 따른 박스의 스타일 변화를 보세요.
+    </div>
+  </body>
+</html>
