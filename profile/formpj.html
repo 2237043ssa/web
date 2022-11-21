@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <style>
+      #menu {
+        width: 260px;
+        float: left;
+      }
+      #Home
+      {
+        text-align: center;
+        font-size: 50px;
+      }
+      li {
+        list-style: none;
+      }
+      legend {
+        border: 3px solid red;
+        text-align: center;
+        padding: 5px 10px;
+        border: none;
+      }
+      
+      @media screen and (orientation: portrait) {
+        body {
+          background-color: rgb(49, 45, 45);
+          color: white;
+          text-shadow: 3px 5px 5px white;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        body {
+          background-color: plum;
+          color: black;
+          text-shadow: 3px 5px 5px rgb(216, 93, 93);
+        }
+      }
+      @media screen and (max-width: 767px) {
+        body {
+          width: auto;
+        }
+        #menu {
+          width: auto;
+          float: none;
+        }
+        #section {
+          width: auto;
+          float: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu">
+      <ul>
+        <li><a href="./6-1.html">메뉴1</a></li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+      </ul>
+    </div>
+    <div id="Home"><a href="./formpj.html">Home</a></div>
+    <fieldset>
+      <legend><h2>자기소개 페이지</h2></legend>
+    <form action="page.jsp" method="get">
+      <p>
+        이름 : <input type="text" name="name" size="10" readonly value="심시아"/></p>
+      </p>
+      <p>
+        학번 : <input type="text" name="name" size="10" readonly value="2237043"/></p>
+      </p>
+      <p>생년월일 : <input type="datetime-local" name="birth" /></p>
+      <p>나이 : <input type="number" name="count" min="1" max="130"/></p>
+      이메일 : <input type="email" name="myemail" />
+      <p></p>
+      성별 :
+      <input type="radio" name="sex" value="male" checked /> 남자
+      <input type="radio" name="sex" value="female" checked /> 여자
+      <p></p>
+      몇 학년 :
+      <input type="radio" name="year" value="1" checked />1학년
+      <input type="radio" name="year" value="2" />2학년
+      <input type="radio" name="year" value="3" />3학년
+      <input type="radio" name="year" value="4" />4학년
+      <p></p>
+      <p>
+        학과 : <input type="text" name="school" value="모바일소프트웨어학과" />
+      </p>
+      현재 관심을 가지고 있는 학습 주제는 :
+        <br />
+        <input
+          type="checkbox"
+          name="subject"
+          value="HTML5"
+          checked
+        />HTML5<br />
+        <input type="checkbox" name="subject" value="CSS3" />CSS3<br />
+        <input type="checkbox" name="subject" value="Javascript" />Javascript
+        <br />
+        <input type="checkbox" name="subject" value="Jquery" />Jquery
+      </p>
+      취미 고르기 :
+      <p></p>
+      <select name="취미" size="4" multiple>
+        <option value="랩" selected>랩</option>
+        <option value="요리">요리</option>
+        <option value="볼링">볼링</option>
+        <option value="방송댄스" selected>방송댄스</option>
+      </select>
+      <p></p>
+      나의 퍼스널컬러 대표색 3개:
+      <input type="color" name="color_value" value="#000000" />
+      <input type="color" name="color_value" value="#ffffff" />
+      <input type="color" name="color_value" value="#ff0000" />
+      <p></p>
+      <p>행복도 : 0~100 범위에서 원하는 지점을 선택하세요.</p>
+      <input type="range" name="point" min="0" max="100" />
+        <p>git 혹은 블로그 주소를 입력하세요 : <input type="url" name="myhome" /></p>
+      <div>
+        <h7> 본인 사진을 업로드 하세요.</h7>
+        <p><input type="file" /></p>
+      </div>
+    </form>
+  </fieldset>
+  <p></p>
+  
+  <input type="submit" value="제출" />
+      <input type="reset" value="다시작성" />
+  </body>
+</html>
